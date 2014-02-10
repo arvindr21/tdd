@@ -1,1 +1,207 @@
-My GitHub Page
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test Driven Development - A Quick Start Tutorial</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Arvind Ravulavaru">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" target="_blank" href="css/reveal.min.css">
+    <link rel="stylesheet" target="_blank" href="css/theme/simple.css" id="theme">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" target="_blank" href="lib/css/zenburn.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" target="_blank" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper') + '.css" type="text/css" media="print">');
+    </script>
+    <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+       <div class="slides">
+    <section >
+        <h1>Javascript T.D.D</h1>
+<div>
+        <br>
+    </div>
+<div>Feb, 2014</div>
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div style="text-align: right; ">Arvind Ravulavaru &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</section>
+<section >
+    <h2>contents</h2>
+<div style="text-align: left; ">
+    <ul>
+<li>What is T.D.D.</li>
+<li>T.D.D. &nbsp;boilerplate setup&nbsp;</li>
+<li>How to think towards T.D.D.</li>
+<li>Implementing T.D.D.</li>
+</ul>
+</div>
+</section>
+<section >
+    <h2>T.D.D.</h2>
+<div>
+<img src="http://cdn.tutsplus.com/net/uploads/legacy/767_testDrivenDev/tdd.png" style="width: 443.2917999469688px; height: 443.2917999469688px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section >
+    <h2>T.D.D.</h2>
+<div style="text-align: left; ">
+    <ul>
+<li>Writing tests before development</li>
+    <ul>
+        <li>First&nbsp;<span>think about &nbsp;</span>
+        <span>“how to use”&nbsp;</span>
+        <span>the component</span>
+    </li>
+    <li>
+        <span>And&nbsp;</span>
+        <span>only then&nbsp;</span>
+        <span>about &nbsp;</span>
+        <span>“how to implement”</span>
+    </li>
+</ul>
+<li>
+    <span>T.D.D. is a testing technique as well as a design </span>
+    <span>technique</span>
+</li>
+<li>
+    <span>Results in components </span>
+    <span>that are easy to test ,&nbsp;</span>
+    <span>enhance and adapt.</span>
+</li>
+</ul>
+</div>
+</section>
+<section >
+    <h2>Approach</h2>
+<h2>
+    <img src="http://blog.spec-india.com/wp-content/tdd_flow.gif" style="font-size: 75.96px; width: 477.24780184606885px; height: 497.70074563386976px; max-height: none; max-width: none;">
+</h2>
+</section>
+<section>
+    <h2>Title</h2>
+</section>
+<section >
+    <h2>T.D.D. Boiler plate</h2>
+<div>You can find a T.D.D. boiler plate to quickly start your project <a href="https://github.com/arvindr21/bootstrapBoilerPlate">here</a>
+</div>
+<div>
+    <br>
+</div>
+<div style="text-align: left; ">The boiler plate consists of</div>
+<div style="text-align: left; ">
+<ol>
+<li>Node/NPM</li>
+<li>Grunt</li>
+<li>Bower</li>
+<li>jQuery</li>
+<li>LESS Bootstrap</li>
+<li>Modernizr</li>
+</ol>
+<div>
+<br>
+</div>
+<div>You can find the steps to setup <a href="https://github.com/arvindr21/bootstrapBoilerPlate/blob/master/README.md">here</a>
+</div>
+</div>
+</section>
+<section >
+    <h2>Resources</h2>
+<div style="text-align: left; ">
+    <ol>
+        <li>
+            <br>
+        </li>
+    </ol>
+</div>
+</section>
+</div>
+
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+        // Full list of configuration options available here:
+         // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+            overview: true,
+            previewLinks: false,
+            transition: 'linear',
+            viewDistance: 3,
+
+            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+            transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+            // Parallax scrolling
+            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+            // parallaxBackgroundSize: '2100px 900px',
+
+            // Optional libraries used to extend on reveal.js
+            dependencies: [{
+                src: 'lib/js/classList.js',
+                condition: function () {
+                    return !document.body.classList;
+                }
+            }, {
+                src: 'plugin/markdown/marked.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/markdown/markdown.js',
+                condition: function () {
+                    return !!document.querySelector('[data-markdown]');
+                }
+            }, {
+                src: 'plugin/highlight/highlight.js',
+                async: true,
+                callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }, {
+                src: 'plugin/zoom-js/zoom.js',
+                async: true,
+                condition: function () {
+                    return !!document.body.classList;
+                }
+            }, {
+                src: 'plugin/notes/notes.js',
+                async: true,
+                condition: function () {
+                    return !!document.body.classList;
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>
