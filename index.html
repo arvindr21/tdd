@@ -19,6 +19,11 @@
     <!--[if lt IE 9]>
       <script src="lib/js/html5shiv.js"></script>
       <![endif]-->
+	  <style>
+			.reveal table th, .reveal table td {
+				border: 1px solid;
+				}
+	  </style>
 </head>
 
 <body>
@@ -55,8 +60,8 @@
 <div style="text-align: left; ">
     <ul>
 <li>What is T.D.D.</li>
-<li>T.D.D. &nbsp;boilerplate setup&nbsp;</li>
 <li>How to think towards T.D.D.</li>
+<li>T.D.D. &nbsp;boilerplate setup&nbsp;</li>
 <li>Implementing T.D.D.</li>
 </ul>
 </div>
@@ -69,7 +74,7 @@
 </div>
 </section>
 <section >
-    <h2>T.D.D.</h2>
+    <h2>Why T.D.D. ?</h2>
 <div style="text-align: left; ">
     <ul>
 <li>Writing tests before development</li>
@@ -90,12 +95,20 @@
     <span>technique</span>
 </li>
 <li>
-    <span>Results in components </span>
-    <span>that are easy to test ,&nbsp;</span>
-    <span>enhance and adapt.</span>
+   This will force you to write code such that you end up with code that is safely refactorable
 </li>
+<li>Such an approach will clearly set an expectations as what other people can expect from your code</li>
 </ul>
 </div>
+</section>
+<section>
+    <h2>How to T.D.D.</h2>
+	<ul>
+<li>Use constructors to create instances</li>
+<li>Support configurability</li>
+<li>Keep Methods simple</li>
+<li>Don’t intermingle responsibilities</li>
+<li>And… Write test first!!</li></ul>
 </section>
 <section >
     <h2>Approach</h2>
@@ -103,43 +116,207 @@
     <img src="http://blog.spec-india.com/wp-content/tdd_flow.gif" style="font-size: 75.96px; width: 477.24780184606885px; height: 497.70074563386976px; max-height: none; max-width: none;">
 </h2>
 </section>
-<section>
-    <h2>Title</h2>
-</section>
 <section >
     <h2>T.D.D. Boiler plate</h2>
-<div>You can find a T.D.D. boiler plate to quickly start your project <a href="https://github.com/arvindr21/bootstrapBoilerPlate">here</a>
+<div>A <a href="https://github.com/arvindr21/bootstrapBoilerPlate" target="_blank">T.D.D. boiler plate</a> to quickly start your development here
 </div>
 <div>
     <br>
 </div>
 <div style="text-align: left; ">The boiler plate consists of</div>
 <div style="text-align: left; ">
-<ol>
+<ul>
 <li>Node/NPM</li>
 <li>Grunt</li>
 <li>Bower</li>
 <li>jQuery</li>
 <li>LESS Bootstrap</li>
 <li>Modernizr</li>
-</ol>
+<li>Jasmine</li>
+<li>Karma</li>
+<li>Istanbul</li>
+</ul>
 <div>
 <br>
 </div>
-<div>You can find the steps to setup <a href="https://github.com/arvindr21/bootstrapBoilerPlate/blob/master/README.md">here</a>
+<div>You can find the steps to setup <a href="http://thejackalofjavascript.com/less-bootstrap-boilerplate/" target="_blank">here</a>
 </div>
 </div>
 </section>
 <section >
-    <h2>Resources</h2>
-<div style="text-align: left; ">
-    <ol>
-        <li>
-            <br>
-        </li>
-    </ol>
-</div>
+	<br/><br/><br/>
+    <h3>Sample application explaining how to  write a Test Driven javascript application</h3><br/>
+	<h3>Can be found <a href="http://thejackalofjavascript.com/test-driven-development-by-example/" target="_blank">here</a> too</h3>
 </section>
+<section>
+	<h3>Steps</h3>
+	<ul>
+	<li> Understand Requirement</li>
+	<li> Work on UI </li>
+	<li> Design the business logic</li>
+	<li> Write Test Cases </li>
+	<li> See them fail </li>
+	<li> Write the logic </li>
+	<li> See them pass </li>
+	<li> Refactor code </li>
+	<li> Integration - C.I.</li>
+	</ul>
+
+
+
+</section>
+<section>
+	<h3>Test Cases</h3>
+	<div style="height:499px; overflow:auto;">
+<table style="width:100%; " border="0">
+<thead>
+<tr><th>Case</th>
+<th>Field I</th>
+<th>Field II</th>
+<th>Expected results</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Correct Sum</td>
+<td>5</td>
+<td>6</td>
+<td>11</td>
+</tr>
+
+<tr><td>Incorrect Sum</td>
+<td>5</td>
+<td>6</td>
+<td>9</td>
+</tr>
+
+<tr><td>Negative SUM – I</td>
+<td>-5</td>
+<td>-6</td>
+<td>9</td>
+</tr>
+
+<tr><td>Negative value + Positive value</td>
+<td>-5</td>
+<td>6</td>
+<td>1</td>
+</tr>
+
+<tr><td>Sum is Zero</td>
+<td>-6</td>
+<td>-6</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 1 – I</td>
+<td>dummyText</td>
+<td>6</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 1 – II</td>
+<td>undefined</td>
+<td>6</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 1 – III</td>
+<td>null</td>
+<td>6</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 1 – IV</td>
+<td>$$</td>
+<td>6</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 2 – I</td>
+<td>5</td>
+<td>dummyText</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 2 – II</td>
+<td>5</td>
+<td>undefined</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 2 – III</td>
+<td>5</td>
+<td>null</td>
+<td>0</td>
+</tr>
+
+<tr><td>Invalid Field 2 – IV</td>
+<td>5</td>
+<td>$$</td>
+<td>0</td>
+</tr>
+
+<tr><td>Both Invalid Fields I</td>
+<td>dummyText</td>
+<td>dummyText</td>
+</tr>
+
+<tr><td>Both Invalid Fields II</td>
+<td>null</td>
+<td>null</td>
+<td>0</td>
+</tr>
+
+<tr><td>Both Invalid Fields III</td>
+<td>null</td>
+<td>undefined</td>
+<td>0</td>
+</tr>
+
+<tr><td>Both Invalid Fields IV</td>
+<td>$$</td>
+<td>#@</td>
+<td>0</td>
+</tr>
+</tbody></table>
+	</div>
+</section>
+
+<section>
+<br/><br/><br/><br/><br/>
+	<h3> Back to Demo </h3>	
+</section>
+
+<section>
+<br/><br/><br/><br/><br/>
+	<h3> How to Test Responsive design?? </h3>	
+</section>
+<section >
+        <h1>Questions?</h1>
+<div>
+        <br>
+    </div>
+
+<div>
+    <br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div style="text-align: right; ">@arvindr21 &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</section>
+
 </div>
 
     </div>
